@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.geometry.Insets?>
+<DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ru.mag.db.jdbc.gui.TableController">
+    <header>
+        <AnchorPane minHeight="50.0" minWidth="0.0" prefHeight="60.0" prefWidth="500.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="500.0">
+                    <children>
+                        <Label fx:id="testLabel" text="Table View">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </header>
+    <content>
+        <VBox spacing="10.0" prefWidth="500.0">
+            <children>
+                <TableView fx:id="tableView1" prefHeight="250.0" prefWidth="480.0">
+                    <columns>
+                    </columns>
+                </TableView>
+                <Button mnemonicParsing="false" onAction="#onBack" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #456565; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Назад">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+
+                <HBox alignment="CENTER" spacing="20.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onAddRow" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Add Row" />
+                        <Button mnemonicParsing="false" onAction="#onUpdateRow" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Update Row">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onDeleteRow" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold;" text="Delete Selected" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </content>
+</DialogPane>

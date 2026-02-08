@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ru.mag.db.jdbc.gui.QueryController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Сложна справка (Queries)" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <ComboBox fx:id="querySelector" prefWidth="400.0" promptText="Изберете заявка..."/>
+        <TextField fx:id="parameterField" promptText="Параметър (ID, дата, сума)"/>
+        <Button text="Изпълни" onAction="#handleExecuteQuery" style="-fx-background-color: #2ecc71; -fx-text-fill: white;"/>
+    </HBox>
+
+    <TableView fx:id="resultsTable" VBox.vgrow="ALWAYS">
+    </TableView>
+
+    <Button text="Назад" onAction="#onBack" style="-fx-background-color: #7f8c8d; -fx-text-fill: white;"/>
+</VBox>

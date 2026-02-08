@@ -54,20 +54,4 @@ public class DBUtil {
         }
         return null;
     }
-
-//    public ResultSet getStudentsForCourse(int course) {
-//        ResultSet result = null;
-//        String query = "SELECT FACNUM as \"Fakulteten nomer\", NAME as Ime FROM student WHERE course = ?";
-//        try {
-//            Connection conn = getConnection();
-//            if (conn != null) {
-//                PreparedStatement pstmt = conn.prepareStatement(query);
-//                pstmt.setInt(1, course);
-//                result = pstmt.executeQuery();
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return result;
-//    }
 }
